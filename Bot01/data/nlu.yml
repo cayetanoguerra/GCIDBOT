@@ -1,0 +1,181 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hola
+    - que tal
+    - como vas
+    - buenos dias
+    - buenas tardes
+    - buenas noches
+    - buenas
+    - que paso
+    - que hay
+
+- intent: goodbye
+  examples: |
+    - adios
+    - hasta luego
+    - nos vemos
+    - ciao
+
+- intent: affirm
+  examples: |
+    - si
+    - Sí
+    - sí
+    - efectivamente
+    - por supuesto
+    - me parece bien
+    - correcto
+
+- intent: deny
+  examples: |
+    - no
+    - nada
+    - no creo
+    - no me parece
+    - que va
+    - realmente no
+
+- intent: mood_great
+  examples: |
+    - perfecto
+    - muy bien
+    - estupendo
+    - increible
+    - maravillosamente
+    - estoy bien
+    - me siento bien
+    - bien
+
+- intent: mood_unhappy
+  examples: |
+    - triste
+    - fatal
+    - no contento
+    - mal
+    - muy mal
+    - desastre
+    - terrible
+    - no muy bien
+    - bastante mal
+    - hecho polvo
+
+- intent: bot_challenge
+  examples: |
+    - eres un bot?
+    - ¿eres humano?
+    - ¿estoy hablando con un bot?
+    - hablo con una persona?
+
+- intent: PCR_request
+  examples: |
+    - quiero hacerme una PCR
+    - quiero realizarme una PCR
+    - solicito que me realicen un test PCR
+    - quiero hacerme la prueba PCR
+    - solicito una prueba diagnostica
+    - quiero saber si tengo el coronavirus
+    - necesito justificar que no tengo el covid
+    - en mi trabajo me exigen demostrar que estoy sano
+    - quiero saber si tengo el virus
+    - debo hacerme un test para saber si doy positivo
+    - donde puedo hacerme un test?
+    - Buenos días, me gustaría hacerme un test a ver si tengo el covid.
+
+- intent: PCR_result
+  examples: |
+    - quiero el resultado de una PCR que me hice hace unos dias
+    - ¿Está el resultado de mi PCR?
+    - El viernes me hice una prueba para el coronavirus, quiero saber si ya esta la respuesta
+    - me puede dar los resultados de las pruebas de la semana pasada?
+    - quiero saber que salio de la pcr
+    - estan ya los resultados de mi prueba del virus
+    - ya me hice la prueba. quiero saber si tengo el virus.
+    - ¿Tienen ya los resultados de mi test?
+    - Pregunto por los test que me hice.
+
+- intent: request_name
+  examples: |
+    - me llamo Cayetano Guerra Artal
+    - Juan Pérez López
+    - soy Ana López
+    - mi nombre es Alfonso Santana Arencibia
+    - Anselmo Martínez
+    - Beatriz Serrano Aguilar
+    - Aurora Artal Fernández
+    - Juana Acosta
+    - Felipe Reyes
+    - Alberto García
+    - claro, Rosa Hernán Gómez
+    - Samuel Perez
+    - si, es Antonia Santos
+    - María Dolores Afonso
+    - Javier Lorenzo Calvo
+    - Elena Domínguez
+    - Amaya Obrador Medina
+    - soy Laura Trujillo
+    - Secundino Arrabal
+    - Mariano Rajoy
+    - Marcelino Arroyo
+
+- intent: get_date
+  examples: |
+    - 5 de octubre, 11:00
+    - 5 de octubre, 12:00
+    
+- intent: request_health_center
+  examples: |
+    - Quiero pedir cita en mi centro de salud.
+    - Necesito ver a un médico
+    - no me encuentro bien y quiero que un médico me vea
+    - quiero consultar opinión médica
+    - necesito valoracion medica
+    - tengo que ir al centro de salud
+    - centro de salud, por favor.
+    - Centro de Salud
+    - Quiero ei al centro de atención primaria
+    - mi mujer requiere atención primaria
+    - quiero pedir cita
+    - medico de cabecera
+    - quiero pedir cita con mi médico de cabecera
+    - necesito atencion primaria
+    - querría ver a mi médico
+    - medico de medicina general
+    - quiero ver al médico de familia, por favor.
+    - hola. quiero tener una visita a mi medico
+    - buenos días, ¿podría darme una cita con mi médico? por favor.
+    - Buenas tarde, solicito atención primaria.
+    - Estoy llamando a mi centro de salud y no me cogen el tlf. Me puede dar cita por aquí?
+    - Puedo pedir cita por aquí?
+
+- intent: phone_appoinment
+  examples: |
+    - Telefónica
+    - telefonica
+    - por teléfono
+    - mejor por telefono
+    - vía telefónica.
+    - tlf
+    - tlf.
+    - por tlf
+    - telefonicamente. 
+
+- intent: face_to_face_appoinment
+  examples: |
+    - Presencial
+    - presencial
+    - en persona mejor
+    - personal
+    - presencialmente
+
+- intent: get_phone
+  examples: |
+    - 656 777 890
+    - 922837485
+    - +(34) 789 783 209
+    - mi tlf es el 699 389 902
+    - 555-343-343
+

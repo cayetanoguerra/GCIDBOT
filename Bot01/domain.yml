@@ -1,0 +1,96 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - PCR_request
+  - PCR_result
+  - request_name
+  - get_date
+  - request_health_center
+  - face_to_face_appoinment
+  - phone_appoinment
+  - get_phone
+  - ULPGC_SIE_request_for_place_grade
+
+responses:
+  utter_greet:
+  - text: Bienvenido al <b>Servicio Información al Estudiante</b>. ¿Cómo podemos ayudarte?
+
+  utter_ask_name:
+  - text: De acuerdo. Dígame su nombre y apellidos, por favor.
+
+  utter_patient_ask_name:
+  - text: De acuerdo. Dígame el nombre y apellidos del paciente, por favor.
+
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+
+  utter_did_that_help:
+  - text: Did that help you?
+
+  utter_happy:
+  - text: Great, carry on!
+
+  utter_goodbye:
+  - text: Gracias por su confianza. Le deseamos que pase un buen día ♥.
+
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+
+  utter_PCRrequest:
+  - buttons:
+    - payload: /affirm
+      title: Sí
+    - payload: /deny
+      title: No
+    text: Las pruebas se realizan en el <b>Edificio Miller</b>. El horario es de 8:00
+      a 19:00 de lunes a viernes. ¿Desea pedir hora para hacerse la prueba?
+
+  utter_PCRresult:
+  - text: Está usted malísimo, malísimo!!!
+
+  utter_calendar:
+  - buttons:
+    - payload: /get_date
+      title: 5 de octubre, 11:00
+    - payload: /get_date
+      title: 5 de octubre, 12:00
+    - payload: /get_date
+      title: 6 de octubre, 10:00    
+    - payload: /get_date
+      title: 7 de octubre, 9:00
+    - payload: /get_date
+      title: 8 de octubre, 11:00
+    - payload: /get_date
+      title: 8 de octubre, 8:30
+    - payload: /get_date
+      title: 9 de octubre, 10:30
+    text: Estas son las horas que están disponibles. Indíqueme la que más le conviene.
+
+
+  utter_health_center:
+  - text: Por supuesto. ¿Desea una cita presencial con el médico o telefónica?
+    buttons:
+      - payload: /face_to_face_appoinment
+        title: Presencial
+      - payload: /phone_appoinment
+        title: Telefónica
+
+  utter_phone:
+    - text: Dígame su teléfono, por favor.
+
+actions:
+- action_get_name
+- action_get_phone
+- action_date_confirmation
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

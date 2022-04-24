@@ -1,0 +1,78 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: PCR request test
+  steps:
+  - intent: PCR_request
+  - action: utter_PCRrequest  
+  - intent: affirm
+  - action: utter_ask_name
+  - intent: request_name
+  - action: action_get_name
+  - action: utter_calendar
+  - intent: get_date
+  - action: action_date_confirmation
+  - action: utter_goodbye
+
+- story: PCR request no test
+  steps:
+  - intent: PCR_request
+  - action: utter_PCRrequest  
+  - intent: deny
+  - action: utter_goodbye
+
+- story: PCR result
+  steps:
+  - intent: PCR_result
+  - action: utter_PCRresult  
+
+- story: request health center face to face
+  steps:
+  - intent: request_health_center
+  - action: utter_health_center
+  - intent: face_to_face_appoinment
+  - action: utter_ask_name
+  - intent: request_name
+  - action: action_get_name
+  - action: utter_calendar
+  - intent: get_date
+  - action: action_date_confirmation
+  - action: utter_goodbye
+
+- story: request health center phone
+  steps:
+  - intent: request_health_center
+  - action: utter_health_center
+  - intent: phone_appoinment
+  - action: utter_phone
+  - intent: get_phone
+  - action: action_get_phone
+  - action: utter_goodbye
